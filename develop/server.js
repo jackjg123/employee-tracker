@@ -19,3 +19,11 @@ const db = mysql.createConnection(
   },
   console.log(`Connected to database`)
 );
+
+app.use((req, res) => {
+  res.status(404).end();
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
